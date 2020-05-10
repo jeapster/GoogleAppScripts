@@ -28,12 +28,5 @@ function onEdit(e) {
 
 
 function onOpen(e) {
-  // Calculate pay period hours only on opening spreadsheet  
-  for (var i = 0; i < allSheets.length; i++) {
-    var strPayPeriod = calculatePayPeriod(allSheets[i]);
-    var hrsPayPeriod = calculateHrsInPayPeriod(strPayPeriod);
-    
-    allSheets[i].getRange("D10").setValue(strPayPeriod);
-    allSheets[i].getRange("M10").setValue(hrsPayPeriod);
-  }  
+  initAdminMenu();
 }
