@@ -12,7 +12,8 @@ function calculateHolidayBalance() {
   var holidayHrs = 0;
 
   for (var j = 0; j < holidays.length; j++) {    
-    var holiday = new Date(holidays[j].valueOf());    
+    var holiday = new Date(holidays[j].valueOf());
+ 
     if(holiday >= startDate && holiday <= endDate) {
       holidayHrs += 8;
     }
